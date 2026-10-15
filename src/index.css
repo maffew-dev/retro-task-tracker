@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-pixel: 'Press Start 2P', monospace;
+    --font-vt: 'VT323', monospace;
+    --font-silkscreen: 'Silkscreen', monospace;
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #121216;
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Custom retro fonts */
+.font-pixel {
+  font-family: 'Press Start 2P', monospace;
+}
+.font-vt {
+  font-family: 'VT323', monospace;
+}
+.font-silkscreen {
+  font-family: 'Silkscreen', monospace;
+}
+.font-display {
+  font-family: 'Space Grotesk', sans-serif;
+}
+.font-sans-clean {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Retro Neo-Brutalist & 90s OS Shadows */
+.retro-shadow {
+  box-shadow: 4px 4px 0px 0px #000000;
+}
+.retro-shadow-sm {
+  box-shadow: 2px 2px 0px 0px #000000;
+}
+.retro-shadow-lg {
+  box-shadow: 6px 6px 0px 0px #000000;
+}
+.retro-shadow-neon {
+  box-shadow: 4px 4px 0px 0px #ff007f, 0 0 15px rgba(0, 243, 255, 0.4);
+}
+.retro-shadow-matcha {
+  box-shadow: 4px 4px 0px 0px #2d3b2f;
+}
+
+/* Retro 90s OS Bevel Borders */
+.bevel-outset {
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #4a4a4a;
+  border-bottom: 2px solid #4a4a4a;
+}
+.bevel-inset {
+  border-top: 2px solid #4a4a4a;
+  border-left: 2px solid #4a4a4a;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
+
+/* CRT Scanline Overlay */
+.crt-scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Retro Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #2b2b36;
+  border: 1px solid #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #8e8e9f;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #333333;
+  border-bottom: 2px solid #333333;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a9a9be;
+}
+
+/* Theme variables */
+.theme-cyberpunk {
+  --bg-primary: #0d0221;
+  --bg-secondary: #190934;
+  --bg-card: #240b4a;
+  --accent-cyan: #00f3ff;
+  --accent-pink: #ff007f;
+  --accent-yellow: #ffe600;
+  --text-main: #f0f0ff;
+  --text-dim: #9b8ec4;
+  --border-color: #00f3ff;
+}
+
+.theme-windows98 {
+  --bg-primary: #008080;
+  --bg-secondary: #c0c0c0;
+  --bg-card: #d4d0c8;
+  --accent-blue: #000080;
+  --text-main: #000000;
+  --text-dim: #444444;
+  --border-color: #000000;
+}
+
+.theme-lofi {
+  --bg-primary: #f2eee3;
+  --bg-secondary: #e2dcce;
+  --bg-card: #ffffff;
+  --accent-sage: #5b7553;
+  --accent-rose: #d67b73;
+  --accent-warm: #dca355;
+  --text-main: #2b2d28;
+  --text-dim: #6d7168;
+  --border-color: #2b2d28;
+}
+
+.theme-arcade {
+  --bg-primary: #181425;
+  --bg-secondary: #262b44;
+  --bg-card: #3a4466;
+  --accent-gold: #fee761;
+  --accent-neon: #38b764;
+  --accent-coral: #e43b44;
+  --text-main: #ffffff;
+  --text-dim: #8b9bb4;
+  --border-color: #000000;
+}
+
+/* Pixel art crisp rendering */
+.pixelated {
+  image-rendering: pixelated;
+}
